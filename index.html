@@ -16,7 +16,6 @@ body{
   padding:15px;
 }
 
-/* largeur adaptée TEL */
 .card{
   max-width:600px;
   margin:auto;
@@ -33,6 +32,7 @@ body{
   color:#3b2a20;
 }
 
+/* 🐾 ANIMATION PATTES */
 .paw{
   display:inline-block;
   animation:bounce 1.5s infinite;
@@ -155,8 +155,8 @@ select{
 <div class="card">
 
   <div class="header">
-    <h1>🐾 Moumou & Cie 🐾</h1>
-    <p>Simulez votre garde ! 🐾</p>
+    <h1><span class="paw">🐾</span> Moumou & Cie <span class="paw">🐾</span></h1>
+    <p>Simulez votre garde ! <span class="paw">🐾</span></p>
   </div>
 
   <div class="section">
@@ -176,7 +176,7 @@ select{
       <span id="animaux">1</span>
       <button onclick="change('animaux',1)">+</button>
     </div>
-    <div class="small">+3€ / animal supplémentaire 🐾</div>
+    <div class="small">+3 € / animal supplémentaire 🐾</div>
   </div>
 
   <div class="section">
