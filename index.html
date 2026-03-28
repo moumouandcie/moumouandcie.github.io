@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
 <style>
 
 body{
@@ -11,7 +16,7 @@ body{
   padding:15px;
 }
 
-/* largeur optimisée */
+/* largeur adaptée TEL */
 .card{
   max-width:600px;
   margin:auto;
@@ -24,7 +29,7 @@ body{
 }
 
 .header h1{
-  font-size:34px;
+  font-size:32px;
   color:#3b2a20;
 }
 
@@ -45,7 +50,7 @@ body{
 
 /* BLOCS */
 .section{
-  background:rgba(255,255,255,0.85);
+  background:rgba(255,255,255,0.9);
   border-radius:22px;
   padding:18px;
   margin-bottom:14px;
@@ -66,14 +71,13 @@ body{
 }
 
 .counter button{
-  width:42px;
-  height:42px;
+  width:44px;
+  height:44px;
   border-radius:12px;
   border:none;
   background:#e8dccb;
   color:#3b2a20;
   font-size:20px;
-  cursor:pointer;
 }
 
 .counter span{
@@ -113,16 +117,8 @@ select{
   margin-top:12px;
 }
 
-.line p{
-  font-size:14px;
-}
-
-.line strong{
-  font-size:18px;
-}
-
 .big strong{
-  font-size:40px;
+  font-size:42px;
 }
 
 .divider{
@@ -134,7 +130,6 @@ select{
 .sub{
   font-size:12px;
   opacity:0.6;
-  margin-top:3px;
 }
 
 .small{
@@ -152,6 +147,7 @@ select{
 }
 
 </style>
+
 </head>
 
 <body>
@@ -159,7 +155,7 @@ select{
 <div class="card">
 
   <div class="header">
-    <h1><span class="paw">🐾</span> Moumou & Cie <span class="paw">🐾</span></h1>
+    <h1>🐾 Moumou & Cie 🐾</h1>
     <p>Simulez votre garde ! 🐾</p>
   </div>
 
@@ -226,7 +222,7 @@ select{
     </div>
     <div class="sub">Paiement à la réservation</div>
 
-    <div class="line" style="margin-top:14px;">
+    <div class="line">
       <p>Solde</p>
       <strong id="reste">0 €</strong>
     </div>
