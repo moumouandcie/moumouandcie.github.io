@@ -8,22 +8,23 @@ body{
   font-family:'Inter',sans-serif;
   background:linear-gradient(180deg,#fdfaf3,#efe7dc);
   margin:0;
-  padding:20px;
+  padding:15px;
 }
 
+/* largeur optimisée */
 .card{
-  max-width:420px;
+  max-width:600px;
   margin:auto;
 }
 
 /* HEADER */
 .header{
   text-align:center;
-  margin-bottom:30px;
+  margin-bottom:25px;
 }
 
 .header h1{
-  font-size:32px;
+  font-size:34px;
   color:#3b2a20;
 }
 
@@ -44,11 +45,11 @@ body{
 
 /* BLOCS */
 .section{
-  background:rgba(255,255,255,0.8);
-  border-radius:24px;
+  background:rgba(255,255,255,0.85);
+  border-radius:22px;
   padding:18px;
-  margin-bottom:16px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.06);
+  margin-bottom:14px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.05);
 }
 
 .label{
@@ -95,7 +96,7 @@ select{
   background:linear-gradient(180deg,#3a2a21,#2b1f18);
   border-radius:28px;
   padding:24px;
-  margin-top:25px;
+  margin-top:20px;
   color:#fff;
   box-shadow:0 20px 50px rgba(0,0,0,0.25);
 }
@@ -121,7 +122,7 @@ select{
 }
 
 .big strong{
-  font-size:38px;
+  font-size:40px;
 }
 
 .divider{
@@ -162,7 +163,6 @@ select{
     <p>Simulez votre garde ! 🐾</p>
   </div>
 
-  <!-- JOURS -->
   <div class="section">
     <div class="label">Nombre de jours</div>
     <div class="counter">
@@ -173,7 +173,6 @@ select{
     <div class="small">Réduction dès 7 jours 🐾</div>
   </div>
 
-  <!-- ANIMAUX -->
   <div class="section">
     <div class="label">Nombre d’animaux</div>
     <div class="counter">
@@ -184,7 +183,6 @@ select{
     <div class="small">+3€ / animal supplémentaire 🐾</div>
   </div>
 
-  <!-- TYPE -->
   <div class="section">
     <div class="label">Animal</div>
     <select id="animal" onchange="calculer()">
@@ -193,7 +191,6 @@ select{
     </select>
   </div>
 
-  <!-- PASSAGES -->
   <div class="section">
     <div class="label">Passages / jour</div>
     <div class="counter">
@@ -203,7 +200,6 @@ select{
     </div>
   </div>
 
-  <!-- DUREE -->
   <div class="section">
     <div class="label">Durée / passage</div>
     <div class="counter">
@@ -213,7 +209,6 @@ select{
     </div>
   </div>
 
-  <!-- RESULTAT -->
   <div class="result">
 
     <p class="result-title">Coût total</p>
