@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#1c1814">
 <title>Moumou & Cie</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Italiana&display=swap" rel="stylesheet">
 <style>
@@ -10,26 +11,18 @@
 html { background: #1c1814; scroll-behavior: smooth; }
 body { font-family: 'DM Sans', sans-serif; background: #1c1814; color: rgba(255,255,255,0.75); overflow-x: hidden; }
 body::after { content: ""; position: fixed; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E"); pointer-events: none; z-index: 9999; opacity: 0.5; }
-
-/* BURGER */
 .burger { position: fixed; top: 20px; left: 20px; width: 50px; height: 50px; background: #a0522d; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 2000; cursor: pointer; box-shadow: 0 4px 20px rgba(160,82,45,0.4); transition: 0.3s; }
 .burger:hover { transform: scale(1.08); background: #3d2b1f; }
 .burger-lines { display: flex; flex-direction: column; gap: 4px; }
 .burger-lines span { display: block; width: 18px; height: 1.5px; background: white; border-radius: 2px; }
-
-/* OVERLAY */
 .overlay { position: fixed; inset: 0; background: rgba(10,8,6,0.7); backdrop-filter: blur(8px); opacity: 0; pointer-events: none; transition: 0.4s; z-index: 1400; }
 .overlay.active { opacity: 1; pointer-events: all; }
-
-/* NAV */
 nav { position: fixed; top: 0; left: 0; width: 290px; height: 100%; background: #100e0b; display: flex; flex-direction: column; padding: 90px 40px 60px; transform: translateX(-100%); transition: 0.4s cubic-bezier(0.4,0,0.2,1); z-index: 1500; border-right: 1px solid rgba(255,255,255,0.05); }
 nav.active { transform: translateX(0); }
 .nav-logo { font-family: 'Italiana', serif; font-size: 24px; color: #faf7f2; margin-bottom: 50px; padding-bottom: 28px; border-bottom: 1px solid rgba(255,255,255,0.08); letter-spacing: 1px; }
 nav a { font-size: 12px; font-weight: 300; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; color: rgba(255,255,255,0.5); padding: 13px 0; border-bottom: 1px solid rgba(255,255,255,0.05); transition: 0.3s; display: block; }
 nav a:hover { color: #c4855a; padding-left: 8px; }
 body.menu-open { overflow: hidden; }
-
-/* HERO */
 .hero { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 120px 30px 80px; position: relative; overflow: hidden; }
 .hero-orb { position: absolute; border-radius: 50%; pointer-events: none; }
 .hero-orb.o1 { width: 500px; height: 500px; background: radial-gradient(circle, rgba(160,82,45,0.18) 0%, transparent 70%); top: -80px; right: -80px; }
@@ -50,30 +43,20 @@ body.menu-open { overflow: hidden; }
 .hero-btn-outline { display: inline-flex; align-items: center; gap: 10px; padding: 15px 36px; background: transparent; color: #c4855a; text-decoration: none; font-size: 12px; font-weight: 400; letter-spacing: 2px; text-transform: uppercase; border-radius: 60px; transition: 0.35s; border: 1px solid rgba(196,133,90,0.4); }
 .hero-btn-outline:hover { background: rgba(160,82,45,0.1); border-color: #c4855a; transform: translateY(-2px); color: white; }
 @keyframes fadeUp { from{opacity:0;transform:translateY(30px);} to{opacity:1;transform:translateY(0);} }
-
-/* REVEAL */
 .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.8s ease, transform 0.8s ease; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 .reveal-delay-1 { transition-delay: 0.1s; }
 .reveal-delay-2 { transition-delay: 0.2s; }
 .reveal-delay-3 { transition-delay: 0.35s; }
-
-/* DIVIDER */
 .divider { width: 100%; height: 1px; background: linear-gradient(to right, transparent, rgba(255,255,255,0.08), transparent); }
-
-/* SECTIONS */
 section { padding: 100px 24px; max-width: 1000px; margin: auto; }
 .section-label { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: #c4855a; font-weight: 400; text-align: center; margin-bottom: 16px; }
 h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(34px, 6vw, 52px); font-weight: 400; text-align: center; color: #faf7f2; margin-bottom: 64px; line-height: 1.2; }
 h2 em { font-style: italic; color: #c4855a; }
-
-/* STORY */
 .story-wrap { max-width: 700px; margin: auto; background: #faf7f2; border-radius: 28px; padding: 56px 60px; box-shadow: 0 30px 80px rgba(0,0,0,0.4); position: relative; overflow: hidden; }
 .story-wrap::before { content: "\201C"; font-family: 'Cormorant Garamond', serif; font-size: 180px; color: #f0e0d4; position: absolute; top: -20px; left: 16px; line-height: 1; pointer-events: none; opacity: 0.6; }
 .story-wrap p { font-size: 15px; line-height: 2; color: #7a6658; margin-bottom: 22px; text-align: justify; position: relative; }
 .story-wrap p.accent { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 19px; color: #a0522d; line-height: 1.7; text-align: center; }
-
-/* SERVICES */
 .services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; max-width: 780px; margin: auto; }
 .service-card { background: #faf7f2; border-radius: 22px; padding: 30px 28px 30px 40px; position: relative; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.3); transition: transform 0.35s, box-shadow 0.35s; }
 .service-card:hover { transform: translateY(-5px); box-shadow: 0 24px 60px rgba(0,0,0,0.4); }
@@ -81,8 +64,6 @@ h2 em { font-style: italic; color: #c4855a; }
 .service-card .s-icon { font-size: 26px; margin-bottom: 12px; }
 .service-card strong { display: block; font-size: 14px; font-weight: 500; margin-bottom: 5px; color: #2c1f16; }
 .service-card span { font-size: 13px; color: #7a6658; font-weight: 300; line-height: 1.5; }
-
-/* ETAPES */
 .steps { max-width: 680px; margin: auto; display: flex; flex-direction: column; gap: 14px; }
 .step { display: flex; gap: 20px; align-items: center; }
 .step-num { width: 50px; height: 50px; flex-shrink: 0; background: #3d2b1f; color: #faf7f2; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; box-shadow: 0 6px 20px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.08); line-height: 1; text-align: center; padding-top: 2px; }
@@ -90,16 +71,12 @@ h2 em { font-style: italic; color: #c4855a; }
 .step-box h3 { font-size: 14px; font-weight: 500; margin-bottom: 5px; color: #2c1f16; }
 .step-box p { font-size: 13px; color: #7a6658; line-height: 1.6; font-weight: 300; }
 .note { max-width: 560px; margin: 48px auto 0; text-align: center; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 17px; color: rgba(255,255,255,0.45); line-height: 1.7; }
-
-/* WHY */
 .why-grid { max-width: 780px; margin: auto; display: grid; grid-template-columns: repeat(2,1fr); gap: 14px; }
 .why-card { background: #faf7f2; border-radius: 22px; padding: 28px 28px 28px 40px; position: relative; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.3); transition: transform 0.35s, box-shadow 0.35s; }
 .why-card:hover { transform: translateY(-5px); box-shadow: 0 24px 60px rgba(0,0,0,0.4); }
 .why-card::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: linear-gradient(to bottom, #a0522d, #c4855a); }
 .why-card h3 { font-size: 14px; font-weight: 500; margin-bottom: 5px; color: #2c1f16; }
 .why-card p { font-size: 13px; color: #7a6658; font-weight: 300; }
-
-/* TARIFS */
 .pricing-wrap { max-width: 720px; margin: auto; }
 .pricing-label { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 400; color: #faf7f2; margin: 46px 0 18px; font-style: italic; }
 table { width: 100%; border-collapse: collapse; background: #faf7f2; border-radius: 20px; overflow: hidden; box-shadow: 0 12px 50px rgba(0,0,0,0.35); table-layout: fixed; }
@@ -111,20 +88,14 @@ tr { border-bottom: 1px solid rgba(61,43,31,0.08); }
 tr:last-child { border-bottom: none; }
 tr:hover { background: #fdf8f5; }
 .mention-tva { text-align: center; font-size: 12px; color: rgba(255,255,255,0.45); font-style: italic; margin-top: 18px; font-weight: 300; }
-
-/* EXTRAS */
 .extras-box { max-width: 500px; margin: 0 auto; background: #faf7f2; border-radius: 24px; padding: 40px; text-align: center; box-shadow: 0 12px 50px rgba(0,0,0,0.35); }
 .extras-box p { font-size: 15px; color: #7a6658; margin: 10px 0; font-weight: 300; }
 .extras-box strong { color: #a0522d; font-weight: 600; }
-
-/* CONDITIONS */
 .cond-box { max-width: 600px; margin: 0 auto 20px; background: #faf7f2; border-radius: 24px; padding: 42px 48px; box-shadow: 0 12px 50px rgba(0,0,0,0.35); }
 .cond-title { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: #a0522d; font-weight: 500; margin-bottom: 14px; margin-top: 26px; }
 .cond-title:first-child { margin-top: 0; }
 .cond-line { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: #7a6658; font-weight: 300; margin: 8px 0; line-height: 1.5; }
 .cond-line::before { content: ""; width: 5px; height: 5px; min-width: 5px; background: #c4855a; border-radius: 50%; margin-top: 7px; }
-
-/* CONTACT */
 .contact-wrap { text-align: center; }
 .contact-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 50px; }
 .contact-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 22px; padding: 34px 38px; text-decoration: none; color: rgba(255,255,255,0.75); min-width: 180px; width: 260px; height: 180px; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 8px 30px rgba(0,0,0,0.3); transition: 0.35s; text-align: center; backdrop-filter: blur(10px); }
@@ -132,8 +103,6 @@ tr:hover { background: #fdf8f5; }
 .c-icon { font-size: 28px; margin-bottom: 14px; }
 .c-label { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: #c4855a; font-weight: 400; margin-bottom: 8px; }
 .c-value { font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.45); }
-
-/* FOOTER */
 footer { text-align: center; padding: 50px 20px; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 18px; color: rgba(255,255,255,0.4); border-top: 1px solid rgba(255,255,255,0.05); }
 </style>
 </head>
@@ -186,7 +155,7 @@ footer { text-align: center; padding: 50px 20px; font-family: 'Cormorant Garamon
         <p>Pendant longtemps, j'ai cherch&#233; ce qui me faisait vraiment vibrer. Je me suis enferm&#233;e dans des chemins qui, au fond, ne me correspondaient pas.</p>
         <p>Puis un jour, j'ai d&#233;cid&#233; de me rendre aux portes ouvertes du refuge d'Ormes.</p>
         <p class="accent">C'est &#224; ce moment-l&#224; que j'ai compris. Je voulais m'engager dans ce combat&#160;: lutter, &#224; mon &#233;chelle, contre l'abandon.</p>
-        <p>Je me suis alors form&#233;e, j'ai obtenu mon ACACED, et j'ai d&#233;cid&#233; de devenir pet sitter. Ce m&#233;tier a du sens — il permet de pr&#233;server le bien-&#234;tre des animaux en leur &#233;vitant le stress et parfois m&#234;me l'abandon.</p>
+        <p>Je me suis alors form&#233;e, j'ai obtenu mon ACACED, et j'ai d&#233;cid&#233; de devenir pet sitter. Ce m&#233;tier a du sens &#8212; il permet de pr&#233;server le bien-&#234;tre des animaux en leur &#233;vitant le stress et parfois m&#234;me l'abandon.</p>
         <p class="accent">Et si je peux vous permettre de partir en vacances l'esprit tranquille, en sachant votre animal entre de bonnes mains, alors j'ai d&#233;j&#224; accompli une partie de cette mission.</p>
     </div>
 </section>
@@ -255,7 +224,7 @@ footer { text-align: center; padding: 50px 20px; font-family: 'Cormorant Garamon
             <tr><td>2 promenades</td><td>27&#x20AC;</td><td>32&#x20AC;</td><td>38&#x20AC;</td></tr>
             <tr><td>3 promenades</td><td>41&#x20AC;</td><td>48&#x20AC;</td><td>56&#x20AC;</td></tr>
         </table>
-        <p class="mention-tva reveal">Tarifs TTC &mdash; TVA non applicable (article 293 B du Code G&#233;n&#233;ral des Imp&#244;ts).</p>
+        <p class="mention-tva reveal">Tarifs TTC &#8212; TVA non applicable (article 293 B du Code G&#233;n&#233;ral des Imp&#244;ts).</p>
     </div>
 </section>
 
@@ -339,7 +308,7 @@ footer { text-align: center; padding: 50px 20px; font-family: 'Cormorant Garamon
     </div>
 </section>
 
-<footer>Moumou &amp; Cie &mdash; Pet sitter professionnelle &#224; Reims</footer>
+<footer>Moumou &amp; Cie &#8212; Pet sitter professionnelle &#224; Reims</footer>
 
 <script>
 (function() {
